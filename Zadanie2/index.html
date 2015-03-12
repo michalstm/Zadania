@@ -1,0 +1,34 @@
+<html ng-app='main'>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="/lib/angular/angular.min.js"></script>
+	<script src="/js/index.js"></script>
+</head>
+<body>
+	<div ng-controller="mainController">
+		<div class="car">
+			<img src="img/m6-sedan-red-side.png">
+			<div id="windows" ng-click="click($event)" class="windows">
+				<input name="windows" ng-show="windows" type="text" ng-init="answer.first=''" ng-model="answer.first" id="answer.first">
+			</div>
+			<div id="doors" ng-click="click($event)" class="doors">
+				<input name="doors" ng-show="doors" type="text" ng-init="answer.second=''" ng-model="answer.second" id="answer.second">
+			</div>
+			<div id="frontwheel" ng-click="click($event)" class="frontwheel">
+				<input name="frontwheel" ng-show="frontwheel" type="text" ng-init="answer.third=''" ng-model="answer.third" id="answer.third">
+			</div>
+			<div id="backwheel" ng-click="click($event)" class="backwheel">
+				<input name="backwheel" ng-show="backwheel" type="text" ng-init="answer.fourth=''" ng-model="answer.fourth" id="answer.fourth">
+			</div>
+		</div>
+		<div class="result">
+			<div ng-show="points">
+				Zdobyłeś: {{score}} na {{allpoints}} punktów.
+			</div>
+			<button class="btn btn-lg btn-primary" type="submit" ng-click="check()">Evaluate</button>
+		</div>
+	</div>
+</body>
+</html>
