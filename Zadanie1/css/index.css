@@ -1,0 +1,16 @@
+.div-view{
+	margin:100px;
+	position: inherit;
+	text-align: center;
+}
+
+.div-view div, button{
+	margin-top: 10px;
+}
+
+input{
+	width: 400px;
+	height: 35px;
+	text-align: center;
+	font-size: 18px;
+}
